@@ -58,4 +58,7 @@
 /// The decoritive views to be placed at the right end of the wave.
 @property (strong, nonatomic) UIView *rightDecorativeView;
 
+// clear the display so that idle amplitude is shown
+- (void)clear;
+
 @end

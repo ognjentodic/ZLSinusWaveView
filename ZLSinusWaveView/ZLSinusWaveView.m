@@ -42,7 +42,7 @@
 -(void)setup {
     _frequency = 1.5;
     _phase = 0;
-    _amplitude = 1.0;
+    _amplitude = 0.1;
     _whiteValue = 1.0;
     _idleAmplitude = 0.1;
     _dampingFactor = 0.86;
@@ -192,5 +192,14 @@
         self.rightDecorativeView.center = CGPointMake(CGRectGetMaxX(frame), CGRectGetMidY(frame));
     }
 }
+
+
+- (void)clear {
+  [super clear];
+  _amplitude = self.idleAmplitude;
+  _dampingAmplitude = 0;
+  [self _refreshDisplay];
+}
+
 
 @end
